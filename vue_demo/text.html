@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手写vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <P>姓名:{{name}}</P>
+        <p>年龄:{{age}}</p>
+        <dl>
+            <dt>住址</dt>
+            <dd>省份:{{addr.province}}</dd>
+            <dd>城市:{{addr.city}}</dd>
+        </dl>
+    </div>
+
+
+
+
+
+
+    <script type="module">
+        // // import compile from "./vue/compile.js";
+        // import createVNode from './vue/vnode.js';
+        // // compile("姓名：{{name}},年龄:{{age}},居住省份：{{addr.province}}", {
+        // //     name: "Fengze",
+        // //     age: 18,
+        // //     addr: {
+        // //         province: "广东",
+        // //         city: "佛山"
+        // //     }
+        // // });
+
+        // // var vnode = new createVNode(document.getElementById("app"));
+        // // console.log(vnode)
+
+        // import render from "./vue/render.js";
+
+        // var vnode = new createVNode(document.getElementById("app"));
+
+        // render(vnode, {
+        //     name: "fish",
+        //     age: 18,
+        //     addr: {
+        //         province: "广东",
+        //         city: "佛山"
+        //     }
+        // })
+
+        // import createResponsive from "./vue/dataResponsive.js"
+        // var origin = {
+        //     name: "fish",
+        //     age: 18,
+        //     addr: {
+        //         province: "广东",
+        //         city: "佛山"
+        //     }
+        // }
+        // window.target = {};
+        // createResponsive(origin, target, function(prop){
+        //     console.log("数据发生了改变" + prop);
+        // })
+
+        import Vue from "./vue/index.js"
+        window.vm = new Vue({
+            el: "#app",
+            data: {
+                name:"FengZe",
+                age:16,
+                addr:{
+                    province:"广东",
+                    city:"佛山"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
